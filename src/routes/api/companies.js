@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/:id', async (req, res) => {
-    const company = await getCompany(companyId)
+    const company = await getCompany(req.params.id)
     if (company) {
         res.send(company)
     } else {
