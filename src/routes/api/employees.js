@@ -11,7 +11,9 @@ import {
 const router = Router()
 
 router.get('/', async (req, res) => {
-    const employees = await getEmployees()
+    const skip = Number(req.query.size) || 10
+    const take = Number(req.query.page) * take || 0
+    const employees = await getEmployees(skip, take)
     res.send(employees)
 })
 
