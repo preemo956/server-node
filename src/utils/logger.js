@@ -1,4 +1,4 @@
-import consola from 'consola'
+import { consola, createConsola }  from 'consola'
 
 const logger = consola
 
